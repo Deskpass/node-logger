@@ -1,12 +1,13 @@
 {
   "name": "@deskpass/node-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "juan@deskpass.com",
   "main": "./dist/logger.js",
   "types": "./dist/logger.d.ts",
   "description": "A simple logger for Node.js Cloud Functions",
   "scripts": {
     "prepare": "husky",
+    "prepublish": "pnpm run build",
     "build": "node esbuild.config.mjs && tsc --emitDeclarationOnly --declaration --outDir dist",
     "tsc": "tsc --noEmit --project tsconfig.json"
   },
